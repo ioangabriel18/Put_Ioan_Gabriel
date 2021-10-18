@@ -1,0 +1,55 @@
+﻿<Window x:Name="___frmMain_" x:Class="Put_IoanGabriel_Lab2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Put_IoanGabriel_Lab2"
+        mc:Ignorable="d"
+        Title="Pizzeria Colosseo" Height="625" Width="1050" ResizeMode="NoResize">
+    <Grid Background="{DynamicResource {x:Static SystemColors.InfoBrushKey}}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="206*"/>
+            <RowDefinition Height="259*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="231*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="242*"/>
+            <ColumnDefinition Width="405*"/>
+            <ColumnDefinition Width="157*"/>
+        </Grid.ColumnDefinitions>
+        <Label Content="&#x9;&#x9;&#x9;&#x9;Pizza - Bake &amp; Sale" AutomationProperties.Name="IblTitle" FontSize="24" FontWeight="Bold" Grid.ColumnSpan="3" Margin="0,10,0,-10" Grid.RowSpan="2"/>
+        <GroupBox Header="Pizza Type" AutomationProperties.Name="gbPizza" FontWeight="Bold" Grid.ColumnSpan="3" Margin="53,64,25,0">
+            <Label Content="Pepperoni Pizza" AutomationProperties.Name="lblPepperoniPizza" Height="28" Margin="27,0,703,0" FontWeight="Normal"/>
+        </GroupBox>
+        <Canvas Margin="81,92,9,82">
+            <Label Content="Margherita Pizza" AutomationProperties.Name="lblMargheritaPizza"/>
+            <TextBox Canvas.Left="765" Canvas.Top="8" Text="0" TextWrapping="Wrap" Width="77" AutomationProperties.Name="txtMargheritaPizza" TextAlignment="Right" IsReadOnly="True"/>
+            <TextBox Canvas.Left="465" Canvas.Top="13" Text="0" TextWrapping="Wrap" Width="120" AutomationProperties.Name="txtPepperoniPizza" TextAlignment="Right" IsReadOnly="True"/>
+            <Label Content="Veggie Pizza" Canvas.Left="336" AutomationProperties.Name="lblVeggiePizza"/>
+            <TextBox Canvas.Left="465" Canvas.Top="44" Text="0" TextWrapping="Wrap" Width="120" AutomationProperties.Name=" txtVeggiePizza" TextAlignment="Right" IsReadOnly="True"/>
+            <Label Content="Quattro Stagioni Pizza " Canvas.Left="282" Canvas.Top="30" AutomationProperties.Name="lblQuatroPizza"/>
+            <TextBox Canvas.Left="155" Canvas.Top="39" Text="0" TextWrapping="Wrap" Width="116" AutomationProperties.Name="txtQuatroPizza" TextAlignment="Right" IsReadOnly="True"/>
+            <Label Content="Canibale Pizza" Canvas.Left="633" AutomationProperties.Name="lblCanibalePizza"/>
+            <TextBox Canvas.Left="155" Canvas.Top="8" Text="0" TextWrapping="Wrap" Width="120" AutomationProperties.Name="txtCanibalePizza" TextAlignment="Right" IsReadOnly="True"/>
+        </Canvas>
+        <GroupBox Header="Current Sale" AutomationProperties.Name="gbSale" FontWeight="Bold" Margin="53,37,68,63" Grid.ColumnSpan="4" Grid.Row="1">
+            <Canvas Margin="-5,0,-2,0" Height="110">
+                <TextBox Text="0" TextWrapping="Wrap" Width="120" AutomationProperties.Name="txtQuantity" TextAlignment="Right" Canvas.Left="103" Canvas.Top="11"/>
+                <ComboBox Canvas.Left="351" Canvas.Top="17" Width="120" AutomationProperties.Name="cmbType"/>
+                <Label Content="Price" Canvas.Left="538" Canvas.Top="7" AutomationProperties.Name="lblPrice" FontWeight="Normal"/>
+                <TextBox Canvas.Left="607" Canvas.Top="14" Text="0" TextWrapping="Wrap" Width="120" AutomationProperties.Name="txtPrice" TextAlignment="Right" IsReadOnly="True"/>
+                <ListBox Height="156" Width="230" AutomationProperties.Name="lstSale" Canvas.Top="55" Canvas.Left="753">
+                    <Label Content="Total" AutomationProperties.Name="lblTotal" FontWeight="Bold"/>
+                    <TextBox Text="0" TextWrapping="Wrap" Width="120" AutomationProperties.Name="txtTotal" TextAlignment="Right" IsReadOnly="True"/>
+                    <Button Content="Add To Sale" AutomationProperties.Name="btnAddToSale"/>
+                    <Button Content="Remove Item" AutomationProperties.Name="btnRemoveItem"/>
+                    <Button Content="Check Out" AutomationProperties.Name="btnCheckOut" FontWeight="Bold"/>
+                </ListBox>
+                <Label Content="Quantity" AutomationProperties.Name="lblQuantity" Height="58" Width="163" Canvas.Left="10" Canvas.Top="5" FontWeight="Normal"/>
+                <Label Content="Type" AutomationProperties.Name="lblType" Canvas.Left="280" Canvas.Top="10" FontWeight="Normal"/>
+            </Canvas>
+        </GroupBox>
+
+    </Grid>
+</Window>
